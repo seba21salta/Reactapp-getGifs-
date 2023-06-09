@@ -6,19 +6,16 @@ export const GifGrid = ({category})=> {
 
     const {images, isLoading} = useFetchGifs(category);
 
- 
-    
-
     return(
         <>
         <h3>{category}</h3>
         
-        <div >
+        <div className="card-grid">
            {
               images.map((image) => (
             
              <GifItem 
-                 key={image.id}
+                 key={image?.id}
                  {...image}
              />     
               ))
