@@ -1,12 +1,12 @@
+import axios from 'axios';
 
 
 
 export const getGifs = async (category) =>{
     const url = `https://api.giphy.com/v1/gifs/search?api_key=F8SkZExXtnY7Gotpvv6VsoRFVkjLaCTj&q=${category}&limit=10`
-    const resp = await fetch(url)
-    const {data} = await resp.json();
+    const resp = ((await axios.get(url)).data).data;
  
-    const gifs = data.map(img => ({
+    const gifs = resp.map(img => ({
        id: img?.id,
        title: img?.title,
        url: img?.images?.downsized_medium?.url
@@ -14,6 +14,6 @@ export const getGifs = async (category) =>{
  
     }));
 
-    return gifs;
+    return gifs; 
  
  }
