@@ -16,7 +16,8 @@ export const GifGrid = ({category})=> {
             
              <GifItem 
                  key={image?.id}
-                 {...image}
+                 image= {image?.title}
+                 url={image?.url}
              />     
               ))
            }
