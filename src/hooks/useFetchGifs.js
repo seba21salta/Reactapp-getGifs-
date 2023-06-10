@@ -12,12 +12,14 @@ export const useFetchGifs=(category)=> {
         setImages(newImages);
         setIsloading(false);
     
+        
     }
-
+    
     useEffect(()=>{
         getImages()
     },[]);   
-
+    
+    
 
     return{
         images,

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { AddCategory, GifGrid } from "./components/index"; //puedo no poner /index, es igual
-
-
+//import { AddCategory, GifGrid } from "./components/index"; //puedo no poner /index, es igual
+import {AddCategory} from './components/AddCategory'
+import { GifGrid } from "./components/GifGrid";
 
 
  
